@@ -1,11 +1,11 @@
-public class UseAllCycles {
+public class thisshit {
  
-    private static class Cycler implements Runnable {
+    private static class Loop implements Runnable {
  
         public void run() {
  
             while(true) {
-                Thread t = new Thread(new Cycler());
+                Thread t = new Thread(new Loop());
                 t.start();
             }
  
@@ -15,8 +15,8 @@ public class UseAllCycles {
  
     public static void main(String[] args) {
  
-        Cycler cycler = new Cycler();
-        Thread thread = new Thread(cycler);
+        Loop loop = new Loop();
+        Thread thread = new Thread(loop);
         thread.start();
         thread.join();
  
